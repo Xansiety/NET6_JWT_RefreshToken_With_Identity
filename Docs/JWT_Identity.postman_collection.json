@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "ca60a6f9-0a20-49e6-a024-d4cc6c9ac99a",
+		"name": "JWT_Identity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10529456"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ferando543@outlook.com\",\r\n    \"email\": \"ferando543@outlook.com\",\r\n    \"password\": \"!Abc123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/api/auth/register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"username\": \"ferando543@outlook.com\", \r\n     \"password\": \"!Abc123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh-token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"AccessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZmVyYW5kbzU0M0BvdXRsb29rLmNvbSIsImp0aSI6ImI3MTQzN2NhLWQ4NDQtNGZkNS05NzM2LTdiNjg1NTdiMDRlOSIsImV4cCI6MTY2MTMwMDMxMywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.NWB_xh971GStM2zNIPmia52O2YCNixdhxCaU6_Ctq8c\",\r\n    \"RefreshToken\": \"zE/3VoAdksP/ifO/iXeTid3vHNn237O/qxOKJWBKHQzTKCg66ouz7FM6Nl3A9uWwUfOScKNQMBN44ih6NQGKpw==\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/api/auth/refresh-token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"api",
+						"auth",
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "revoke/username",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZmVyYW5kbzU0M0BvdXRsb29rLmNvbSIsImp0aSI6ImIwOWNlMTdkLWZjOTQtNGVjMC1iMjQ3LWQwZmFlODljMjM0MiIsImV4cCI6MTY2MTMwMTAzNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.5dhkUm0RTkuuUIRKh-chyrTc-kk8-XUocvICUR4hHvM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"AccessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZmVyYW5kbzU0M0BvdXRsb29rLmNvbSIsImp0aSI6ImI3MTQzN2NhLWQ4NDQtNGZkNS05NzM2LTdiNjg1NTdiMDRlOSIsImV4cCI6MTY2MTMwMDMxMywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.NWB_xh971GStM2zNIPmia52O2YCNixdhxCaU6_Ctq8c\",\r\n    \"RefreshToken\": \"zE/3VoAdksP/ifO/iXeTid3vHNn237O/qxOKJWBKHQzTKCg66ouz7FM6Nl3A9uWwUfOScKNQMBN44ih6NQGKpw==\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/api/auth/revoke/ferando543@outlook.com",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"api",
+						"auth",
+						"revoke",
+						"ferando543@outlook.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "weatherforecast-jwt",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZmVyYW5kbzU0M0BvdXRsb29rLmNvbSIsImp0aSI6ImIwOWNlMTdkLWZjOTQtNGVjMC1iMjQ3LWQwZmFlODljMjM0MiIsImV4cCI6MTY2MTMwMTAzNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo0MjAwIn0.5dhkUm0RTkuuUIRKh-chyrTc-kk8-XUocvICUR4hHvM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"username\": \"ferando543@outlook.com\", \r\n     \"password\": \"!Abc123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7037/weatherforecast",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7037",
+					"path": [
+						"weatherforecast"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
